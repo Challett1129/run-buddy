@@ -425,7 +425,7 @@ section {
         width: 100%;
     }
     
-    /section-title {
+    section-title {
         width: 95%;
     }
 
@@ -444,4 +444,5 @@ section {
     .contact-info > * {
         flex: 0 100%;
     }
+    .contact-order: 3;
 }
