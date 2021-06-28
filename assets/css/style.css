@@ -14,13 +14,22 @@ header {
     display: flex; 
     justify-content: space-between;
     flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-image: url("https://static.fullstack-bootcamp.com/module-2/flipped-hero-image.jpg");
+    background-size: cover;
+    background-position: 80%;
+    background-attachment: fixed;
 }
 header h1 {
     font-weight: bold;
     font-size: 36px;
     color: #fce138;
     margin: 0; 
-    
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 header a {
@@ -45,6 +54,15 @@ header nav ul {
       padding: 10px 15px;
       font-weight: lighter; 
       font-size: 1.55vw;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  header nav ul li a:hover {
+      background: #fce138;
+      color: #024e76;
+      border-radius: 15px;
+      text-shadow: none;
+
   }
 
 
@@ -83,11 +101,12 @@ section {
 .hero {
     background-image: url("https://static.fullstack-bootcamp.com/module-2/flipped-hero-image.jpg");
     background-size: cover;
-    background-position:center;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     align-items: flex-start;
+    background-position: 80%;
+    background-attachment: fixed;
 }
 
 .hero-cta {
@@ -103,16 +122,22 @@ section {
     font-style: italic; 
     font-size: 55px;
     color: #fce138;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
 }
 
 .hero-form {
-    background-color: #fce138;
     padding: 20px;
     color: #024e76;
     border: solid 3px #024e76;     
     width: 40%;
     margin: 3.5%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color:rgba(252, 225, 56, 0.5);
+    border-radius: 15px;
+
 }
+
 .hero-form h3 {
     margin: 0px;
     font-size: 24px;
@@ -128,6 +153,11 @@ section {
         border: none; 
         padding: 10px 20px;
         font-size: 16px;
+        border-radius: 15px;
+} 
+
+.hero-form button:hover {
+    background-color: #39a6b2;
 }
 /* HERO STYLES END */
 
@@ -136,9 +166,15 @@ section {
     display: block;
     padding: 7px 15px; 
     font-size: 16px;
-    color:  #024e76;
+    background-color: rgba(255,255,255, 0.75);
     width: 90%;
     margin-bottom: 15px;
+    border-radius: 15px;
+}
+
+.form-input:focus {
+    background-color: rgba(255,255,255, 1);
+    outline: none;
 }
 
 .hero-form label {
@@ -187,11 +223,14 @@ section {
       margin: 50px auto;
       padding-bottom: 50px;
       width: 80%;
-      border-bottom: 1px solid #39a6b2;
       display: flex;
       flex-wrap: wrap;
       align-items: center; 
       justify-content: space-between;
+  }
+
+  .step:not(:last-child) {
+      border-bottom: 1px solid #39a6b2;
   }
   .step h3 {
       color: #024e76;
@@ -319,10 +358,21 @@ section {
     display: block;
     padding: 7px 15px; 
     font-size: 16px;
-    color: #024e76;
+    background-color: rgba(255,255,255, 0.75);
     width: 100%;
     margin-bottom: 15px;
     margin-top: 5px;
+    border-radius: 15px;
+}
+
+#contact-name:focus {
+    background-color: rgba(255,255,255, 1);
+    outline: none;
+}
+
+#contact-message:focus {
+    background-color: rgba(255,255,255, 1);
+    outline:none;
 }
 
 .contact-form button {
@@ -333,6 +383,12 @@ section {
     text-align: center;
     padding: 15px 0;
     font-size:16px; 
+    border-radius: 15px;
+}
+
+.contact-form button:hover {
+    color:#fce138;
+    background-color: #39a6b2;
 }
 .contact-info a {
   color: #fce138;
@@ -348,6 +404,7 @@ section {
         /* this will be applied on any screen smaller than 980 px; */
        padding-bottom: 0;
        justify-content: center;
+       position: relative;
     }
 
     header h1 {
